@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+  <center><h1> RECIPE$ </h1></center>
+  <center><p>we poor</p></center>
+</head>
+
+<ul style="list-style-type:none">
+  <li><a href="pasta/pasta.html">Pasta</a></li>
+  <li>Mexican</li>
+  <li>Soups</li>
+  <li><a href="Indian/indian.html">Indian</a></li>
+  <li>Asian</li>
+  <li>Dessert</li>
+  <li><a href="rice/rice.html">Rice</a></li>
+</ul>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Lato;}
+
+/*Style the font */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 3px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: ;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #708090;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #FFF0F5;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 3px solid #F0FFFF;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCuisine(event, 'Pasta')">Pasta</button>
+  <button class="tablinks" onclick="openCuisine(event, 'Indian')">Indian</button>
+  <button class="tablinks" onclick="openCuisine(event, 'Mexican')">Mexican</button>
+  <button class="tablinks" onclick="openCuisine(event, 'Rice')">Rice</button>
+  <button class="tablinks" onclick="openCuisine(event, 'Dessert')">Dessert</button>
+  <button class="tablinks" onclick="openCuisine(event, 'Soups')">Soups</button>
+</div>
+
+
+<div id="Pasta" class="tabcontent">
+  <h3>Pasta</h3>
+<ul style="list-style-type:none">
+  <li>Pesto Pasta</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+
+</ul>
+</div>
+
+<div id="Indian" class="tabcontent">
+  <h3>Indian</h3>
+  <ul style="list-style-type:none">
+    <li><a href="indian/yellowdal.html">Curried Yellow Dal</a></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<div id="Mexican" class="tabcontent">
+  <h3>Mexican</h3>
+  <ul style="list-style-type:none">
+    <li>Pesto Pasta</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<div id="Rice" class="tabcontent">
+  <h3>Rice</h3>
+  <ul style="list-style-type:none">
+    <li>Pesto Pasta</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<div id="Dessert" class="tabcontent">
+  <h3>Dessert</h3>
+  <ul style="list-style-type:none">
+    <li>Pesto Pasta</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<div id="Soups" class="tabcontent">
+  <h3>Soups</h3>
+  <ul style="list-style-type:none">
+    <li>Pesto Pasta</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<script>
+
+function openCuisine(evt, cuisineName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cuisineName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
